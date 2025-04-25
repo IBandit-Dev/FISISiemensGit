@@ -32,7 +32,4 @@ function addNote() {
      	notesContainer.innerHTML = '';
      	notes.forEach(note => notesContainer.appendChild(note));
     }
-
-
 }
-     
