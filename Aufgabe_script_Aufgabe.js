@@ -24,6 +24,15 @@ function addNote() {
      	link.download = 'notes.txt';
      	link.click();
     }
+// Funktion zum Sortieren der Notizen nach dem ersten Buchstaben
+    function sortNotes() {
+     	const notesContainer = document.getElementById('notesContainer');
+   	const notes = Array.from(notesContainer.children);
+     	notes.sort((a, b) => a.textContent.localeCompare(b.textContent));
+     	notesContainer.innerHTML = '';
+     	notes.forEach(note => notesContainer.appendChild(note));
+    }
+
 
 }
      
